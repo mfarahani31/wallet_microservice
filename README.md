@@ -49,11 +49,11 @@ POST    | /api/v1/transactions/credit/{userId} | save a credit transaction for a
 POST   | /api/v1/transactions/debit/{userId}   | save a debit transaction for a user |
 Get    | /api/v1/currentBalance/{userId}      | retrieve the current balance of a user|
 
-** You can see the full document of APIs on "[http://localhost:8080/swagger-ui/]()"
+** You can see the full document of APIs on [http://localhost:8080/swagger-ui/](http://localhost:8080/swagger-ui/)
 
 Please check it out !
 
-** And also you can see the database tables on "[http://localhost:8080/h2-console]()"
+** And also you can see the database tables on [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
 
 ---
 
