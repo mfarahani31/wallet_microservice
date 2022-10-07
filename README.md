@@ -76,8 +76,7 @@ The tools that were used in this project;
 Notice!!!
 --
 I should say that; It could have also **Actuator** as a monitoring and availability tool, **RabbitMQ** or **Kafka** as a
-message broker, **Spring-security** as an authentication and user management tool, and some other tools like **
-Kubernetes** and **Jenkins** but it was unnecessary and I wanted to keep it simple so I didn't add them and ignored them
+message broker, **Spring-security** as an authentication and user management tool, and some other tools like **Kubernetes** and **Jenkins** but it was unnecessary and I wanted to keep it simple so I didn't add them and ignored them
 for this step. I know how and when to use these tools!
 
 ---
