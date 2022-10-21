@@ -26,7 +26,7 @@ public class UserControllerIntegrationTest {
     public void getCurrentBalanceByUserId() throws Exception {
         mockMvc.perform(get("/api/v1/users/currentBalance/1"))
                 .andDo(print())
-                .andExpect(jsonPath("$").value("100"))
+                .andExpect(jsonPath("$").isNumber())
                 .andExpect(
                         status().isOk());
     }
