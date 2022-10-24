@@ -76,10 +76,10 @@ The tools that were used in this project;
 ---
 Notice!!!
 --
-It should be said that; Although it could have also Actuator as a monitoring and availability tool, RabbitMQ as a
-message broker, Spring-security as an authentication and user management tool, and some other tools like CI/CD tools, it
-was told in the assignment description that there were unnecessary, and I would like to maintain it as simple as
-possible, so I did not add them and ignored them for this step.
+It should be said that; Although it could have also Spring profiles(dev/prod/...), Actuator as a monitoring and
+availability tool, RabbitMQ as a message broker, Spring-security as an authentication and user management tool, and some
+other tools like CI/CD tools, it was told in the assignment description that there were unnecessary, and I would like to
+maintain it as simple as possible, so I did not add them and ignored them for this step.
 
 ---
 ---
