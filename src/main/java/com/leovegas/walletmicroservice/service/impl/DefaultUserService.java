@@ -27,7 +27,7 @@ public class DefaultUserService implements UserService {
     @Override
     public void creditByUserId(Long userId, Long amount) {
         var user = this.findById(userId).
-                orElseThrow(() -> new ElementNotFoundException("There is not user with this Id"));
+                orElseThrow(() -> new ElementNotFoundException("There is not user with Id = " + userId));
         user.setBalance(user.getBalance() + amount);
         this.userRepository.save(user);
     }
@@ -40,7 +40,7 @@ public class DefaultUserService implements UserService {
     @Override
     public void debitByUserId(Long userId, Long amount) {
         var user = this.findById(userId).
-                orElseThrow(() -> new ElementNotFoundException("There is not user with this Id"));
+                orElseThrow(() -> new ElementNotFoundException("There is not user with Id = " + userId));
         if (user.getBalance() >= amount) {
             user.setBalance(user.getBalance() - amount);
         } else
