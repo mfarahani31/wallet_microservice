@@ -1,5 +1,6 @@
 package com.leovegas.walletmicroservice.service.impl;
 
+import com.leovegas.walletmicroservice.constants.ErrorMessage;
 import com.leovegas.walletmicroservice.dto.TransactionResponseDTO;
 import com.leovegas.walletmicroservice.exception.BadRequestException;
 import com.leovegas.walletmicroservice.mapper.TransactionMapper;
@@ -33,7 +34,7 @@ public class DefaultTransactionService implements TransactionService {
         return this.userService.findById(userId).map(user -> {
             transactionRequest.setUser(user);
             return TransactionMapper.INSTANCE.toTransactionResponseDTO(transactionRepository.save(transactionRequest));
-        }).orElseThrow(() -> new BadRequestException("There is an error with this operation! please try again"));
+        }).orElseThrow(() -> new BadRequestException(ErrorMessage.ERROR_FOR_TRANSACTION));
     }
 
     @Transactional
@@ -45,7 +46,7 @@ public class DefaultTransactionService implements TransactionService {
         return this.userService.findById(userId).map(user -> {
             transactionRequest.setUser(user);
             return TransactionMapper.INSTANCE.toTransactionResponseDTO(transactionRepository.save(transactionRequest));
-        }).orElseThrow(() -> new BadRequestException("There is an error with this operation! please try again"));
+        }).orElseThrow(() -> new BadRequestException(ErrorMessage.ERROR_FOR_TRANSACTION));
     }
 
     @Override
