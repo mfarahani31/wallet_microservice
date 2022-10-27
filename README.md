@@ -68,11 +68,11 @@ The tools that were used in this project;
 - H2 database
 - Lombok
 - Spring-boot test; for write unit test and integration test (`All lines are covered with coverage of 100%`)
-- Swagger for; documenting APIs
+- Swagger; for documenting APIs
 - Mapstruct; for mapping DTOs
 - Flyway; for database versioning
 - Docker; for containerization
-
+- Maven; as the build tool
 ---
 Notice!!!
 --
