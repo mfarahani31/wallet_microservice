@@ -1,0 +1,312 @@
+{
+  "info": {
+    "_postman_id": "b10715d2-70fa-441e-bd20-d3b84de0b93a",
+    "name": "OpenAPI definition",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "api/v1",
+      "item": [
+        {
+          "name": "transactions",
+          "item": [
+            {
+              "name": "Crate a new Debit transaction",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"amount\": \"<long>\",\n    \"transaction_id\": \"<long>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/transactions/debit/:userId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "transactions",
+                    "debit",
+                    ":userId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "<long>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Transaction debit is created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"amount\": \"<long>\",\n    \"transaction_id\": \"<long>\"\n}"
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/transactions/debit/:userId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "transactions",
+                        "debit",
+                        ":userId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n \"amount\": -66131977,\n \"transaction_id\": 13416818,\n \"type\": \"DEBIT\",\n \"createdAt\": \"1959-10-26T13:07:32.389Z\",\n \"updatedAt\": \"1944-05-07T10:59:16.109Z\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Crate a new Credit transaction",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"amount\": \"<long>\",\n    \"transaction_id\": \"<long>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/transactions/credit/:userId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "transactions",
+                    "credit",
+                    ":userId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "<long>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Transaction credit is created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"amount\": \"<long>\",\n    \"transaction_id\": \"<long>\"\n}"
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/transactions/credit/:userId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "transactions",
+                        "credit",
+                        ":userId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n \"amount\": -66131977,\n \"transaction_id\": 13416818,\n \"type\": \"DEBIT\",\n \"createdAt\": \"1959-10-26T13:07:32.389Z\",\n \"updatedAt\": \"1944-05-07T10:59:16.109Z\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get list of transactions by userId for a specific user",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/transactions/byUserId/:userId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "transactions",
+                    "byUserId",
+                    ":userId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "<long>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Found the transactions",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/transactions/byUserId/:userId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "transactions",
+                        "byUserId",
+                        ":userId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n \"amount\": -66131977,\n \"transaction_id\": 13416818,\n \"type\": \"DEBIT\",\n \"createdAt\": \"1959-10-26T13:07:32.389Z\",\n \"updatedAt\": \"1944-05-07T10:59:16.109Z\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Get current balance of a user by userId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/currentBalance/:userId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "currentBalance",
+                ":userId"
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "<long>",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Found the current balance",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/v1/users/currentBalance/:userId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "users",
+                    "currentBalance",
+                    ":userId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "21588832"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
